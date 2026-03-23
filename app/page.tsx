@@ -103,7 +103,7 @@ export default function Home() {
             <div className="flex-1 relative">
               <div className="absolute inset-0 bg-accent/10 blur-[100px] rounded-full" />
               <img 
-                src="/images/academic-showcase.png" 
+                src="/images/academic-showcase.jpg" 
                 alt="Modern academic learning" 
                 className="relative rounded-3xl border border-slate-800 shadow-2xl z-10 w-full"
               />
