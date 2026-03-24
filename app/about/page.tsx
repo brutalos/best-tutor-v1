@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="flex-1 relative">
           <div className="absolute inset-0 bg-accent/20 blur-[120px] rounded-full" />
           <img 
-            src="/images/about-team.png" 
+            src="/images/about-team.jpg" 
             alt="BestTutor team and methodology" 
             className="relative rounded-3xl border border-slate-800 shadow-2xl z-10 w-full"
           />
@@ -70,7 +70,7 @@ export default function AboutPage() {
           {[1, 2, 3, 4].map((n) => (
             <div key={n} className="group">
               <div className="relative mb-4 overflow-hidden rounded-2xl aspect-square bg-slate-800 border border-slate-700 group-hover:border-accent/50 transition-colors">
-                 <img src={`/images/team-member-${n}.png`} alt={`Team Member ${n}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                 <img src={`/images/team-member-${n}.jpg`} alt={`Team Member ${n}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
               </div>
               <h4 className="text-white font-bold group-hover:text-accent transition-colors">Director {n}</h4>
               <p className="text-slate-500 text-sm uppercase tracking-tighter">Academic Lead</p>
