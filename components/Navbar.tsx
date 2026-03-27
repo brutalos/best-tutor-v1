@@ -26,6 +26,7 @@ export default function Navbar() {
               <Link href="/services" className="text-slate-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</Link>
               <Link href="/about" className="text-slate-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">About</Link>
               <Link href="/faq" className="text-slate-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</Link>
+              <Link href="/loyalty" className="text-slate-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Loyalty</Link>
             </div>
           </div>
 
@@ -48,6 +49,7 @@ export default function Navbar() {
             <Link href="/services" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition-colors" onClick={() => setIsOpen(false)}>Services</Link>
             <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition-colors" onClick={() => setIsOpen(false)}>About</Link>
             <Link href="/faq" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition-colors" onClick={() => setIsOpen(false)}>FAQ</Link>
+            <Link href="/loyalty" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-800 transition-colors" onClick={() => setIsOpen(false)}>Loyalty</Link>
           </div>
         </div>
       )}

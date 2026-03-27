@@ -1,0 +1,29 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider      = "prisma-client"
+  output        = "../generated/prisma"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+model LoyaltyMember {
+  id                 Int        @id @default(autoincrement())
+  name               String
+  email              String     @unique
+  code               String     @unique
+  punches            Int        @default(0)
+  freeSessionsEarned Int        @default(0)
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+  punchLogs          PunchLog[]
+}
+
+model PunchLog {
+  id          Int           @id @default(autoincrement())
+  memberId    Int
+  punchNumber Int
+  punchedAt   DateTime      @default(now())
+  member      LoyaltyMember @relation(fields: [memberId], references: [id])
+}

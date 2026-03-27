@@ -5,14 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx prisma db push --skip-generate && next start",
     "lint": "eslint",
     "test:render": "vitest run --reporter=verbose 2>&1",
-    "deploy": "next build"
+    "deploy": "next build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.5.0",
+    "@prisma/client": "^7.5.0",
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.5.0",
+    "better-sqlite3": "^12.8.0",
     "lucide-react": "^0.469.0",
     "next": "16.1.6",
     "react": "19.2.3",
@@ -30,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "happy-dom": "^16",
+    "prisma": "^7.5.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^3"
